@@ -31,10 +31,12 @@ import org.springframework.lang.Nullable;
  * autowiring, provided that they want to expose this functionality for
  * existing bean instances.
  *
+ * ============================ About AutowireCapableBeanFactory begin ============================
  * <p>This subinterface of BeanFactory is not meant to be used in normal
  * application code: stick to {@link org.springframework.beans.factory.BeanFactory}
  * or {@link org.springframework.beans.factory.ListableBeanFactory} for
  * typical use cases.
+ * ============================ About AutowireCapableBeanFactory end ============================
  *
  * <p>Integration code for other frameworks can leverage this interface to
  * wire and populate existing bean instances that Spring does not control

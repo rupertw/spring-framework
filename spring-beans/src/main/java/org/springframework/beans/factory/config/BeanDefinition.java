@@ -26,9 +26,11 @@ import org.springframework.lang.Nullable;
  * constructor argument values, and further information supplied by
  * concrete implementations.
  *
+ * ============================ About BeanDefinition begin ============================
  * <p>This is just a minimal interface: The main intention is to allow a
  * {@link BeanFactoryPostProcessor} such as {@link PropertyPlaceholderConfigurer}
  * to introspect and modify property values and other bean metadata.
+ * ============================ About BeanDefinition end ============================
  *
  * @author Juergen Hoeller
  * @author Rob Harrop

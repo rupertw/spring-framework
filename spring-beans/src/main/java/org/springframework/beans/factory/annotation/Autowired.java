@@ -26,9 +26,17 @@ import java.lang.annotation.Target;
  * Marks a constructor, field, setter method or config method as to be autowired
  * by Spring's dependency injection facilities.
  *
- * <p>Only one constructor (at max) of any given bean class may carry this annotation,
- * indicating the constructor to autowire when used as a Spring bean. Such a
- * constructor does not have to be public.
+ * ============================ About Autowired begin ============================
+ * <p>Only one constructor (at max) of any given bean class may carry this
+ * annotation with the 'required' parameter set to {@code true},
+ * indicating <i>the</i> constructor to autowire when used as a Spring bean.
+ * If multiple <i>non-required</i> constructors carry the annotation, they
+ * will be considered as candidates for autowiring. The constructor with
+ * the greatest number of dependencies that can be satisfied by matching
+ * beans in the Spring container will be chosen. If none of the candidates
+ * can be satisfied, then a default constructor (if present) will be used.
+ * An annotated constructor does not have to be public.
+ * ============================ About Autowired end ============================
  *
  * <p>Fields are injected right after construction of a bean, before any config
  * methods are invoked. Such a config field does not have to be public.
@@ -43,6 +51,7 @@ import java.lang.annotation.Target;
  * {@link java.util.Optional} or, as of Spring Framework 5.0, also as {@code @Nullable}
  * or a not-null parameter type in Kotlin, overriding the base required semantics.
  *
+ *  ============================ About Autowired begin ============================
  * <p>In case of a {@link java.util.Collection} or {@link java.util.Map} dependency type,
  * the container autowires all beans matching the declared value type. For such purposes,
  * the map keys must be declared as type String which will be resolved to the corresponding
@@ -61,6 +70,7 @@ import java.lang.annotation.Target;
  * {@link org.springframework.beans.factory.config.BeanFactoryPostProcessor BeanFactoryPostProcessor}
  * types. Please consult the javadoc for the {@link AutowiredAnnotationBeanPostProcessor}
  * class (which, by default, checks for the presence of this annotation).
+ * ============================ About Autowired end ============================
  *
  * @author Juergen Hoeller
  * @author Mark Fisher

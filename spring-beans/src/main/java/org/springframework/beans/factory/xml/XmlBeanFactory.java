@@ -22,15 +22,18 @@ import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.core.io.Resource;
 
 /**
+ * ============================ About XmlBeanFactory begin ============================
  * Convenience extension of {@link DefaultListableBeanFactory} that reads bean definitions
  * from an XML document. Delegates to {@link XmlBeanDefinitionReader} underneath; effectively
  * equivalent to using an XmlBeanDefinitionReader with a DefaultListableBeanFactory.
+ * ============================ About XmlBeanFactory end ============================
  *
  * <p>The structure, element and attribute names of the required XML document
  * are hard-coded in this class. (Of course a transform could be run if necessary
  * to produce this format). "beans" doesn't need to be the root element of the XML
  * document: This class will parse all bean definition elements in the XML file.
  *
+ * ============================ About XmlBeanFactory begin ============================
  * <p>This class registers each bean definition with the {@link DefaultListableBeanFactory}
  * superclass, and relies on the latter's implementation of the {@link BeanFactory} interface.
  * It supports singletons, prototypes, and references to either of these kinds of bean.
@@ -40,6 +43,7 @@ import org.springframework.core.io.Resource;
  * <p><b>For advanced needs, consider using a {@link DefaultListableBeanFactory} with
  * an {@link XmlBeanDefinitionReader}.</b> The latter allows for reading from multiple XML
  * resources and is highly configurable in its actual XML parsing behavior.
+ * ============================ About XmlBeanFactory end ============================
  *
  * @author Rod Johnson
  * @author Juergen Hoeller

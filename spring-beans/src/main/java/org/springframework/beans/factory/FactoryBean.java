@@ -37,11 +37,13 @@ import org.springframework.lang.Nullable;
  * {@link org.springframework.jndi.JndiObjectFactoryBean}. It can be used for
  * custom components as well; however, this is only common for infrastructure code.
  *
+ * ============================ About FactoryBean begin ============================
  * <p><b>{@code FactoryBean} is a programmatic contract. Implementations are not
  * supposed to rely on annotation-driven injection or other reflective facilities.</b>
  * {@link #getObjectType()} {@link #getObject()} invocations may arrive early in
  * the bootstrap process, even ahead of any post-processor setup. If you need access
  * other beans, implement {@link BeanFactoryAware} and obtain them programmatically.
+ * ============================ About FactoryBean end ============================
  *
  * <p>Finally, FactoryBean objects participate in the containing BeanFactory's
  * synchronization of bean creation. There is usually no need for internal

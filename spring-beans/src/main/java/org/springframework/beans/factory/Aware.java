@@ -24,12 +24,16 @@ package org.springframework.beans.factory;
  * consist of just one void-returning method that accepts a single
  * argument.
  *
+ * ============================ About Aware begin ============================
  * <p>Note that merely implementing {@link Aware} provides no default
  * functionality. Rather, processing must be done explicitly, for example
  * in a {@link org.springframework.beans.factory.config.BeanPostProcessor BeanPostProcessor}.
- * Refer to {@link org.springframework.context.support.ApplicationContextAwareProcessor}
- * and {@link org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory}
+ * Refer to {@link org.springframework.context.support.ApplicationContextAwareProcessor},
+ * {@link org.springframework.web.context.support.ServletContextAwareProcessor}
+ * and {@link org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory#initializeBean(
+ * String, Object, org.springframework.beans.factory.support.RootBeanDefinition)}
  * for examples of processing {@code *Aware} interface callbacks.
+ * ============================ About Aware end ============================
  *
  * @author Chris Beams
  * @since 3.1

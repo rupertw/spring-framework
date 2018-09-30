@@ -20,6 +20,7 @@ import org.springframework.beans.BeansException;
 import org.springframework.lang.Nullable;
 
 /**
+ * ============================ About BeanPostProcessor begin ============================
  * Factory hook that allows for custom modification of new bean instances,
  * e.g. checking for marker interfaces or wrapping them with proxies.
  *
@@ -32,6 +33,7 @@ import org.springframework.lang.Nullable;
  * or the like will implement {@link #postProcessBeforeInitialization},
  * while post-processors that wrap beans with proxies will normally
  * implement {@link #postProcessAfterInitialization}.
+ * ============================ About BeanPostProcessor end ============================
  *
  * @author Juergen Hoeller
  * @since 10.10.2003

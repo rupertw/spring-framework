@@ -19,6 +19,7 @@ package org.springframework.beans.factory.config;
 import org.springframework.beans.BeansException;
 
 /**
+ * ============================ About BeanFactoryPostProcessor begin ============================
  * Allows for custom modification of an application context's bean definitions,
  * adapting the bean property values of the context's underlying bean factory.
  *
@@ -36,6 +37,7 @@ import org.springframework.beans.BeansException;
  * instantiation, violating the container and causing unintended side-effects.
  * If bean instance interaction is required, consider implementing
  * {@link BeanPostProcessor} instead.
+ * ============================ About BeanFactoryPostProcessor end ============================
  *
  * @author Juergen Hoeller
  * @since 06.07.2003
